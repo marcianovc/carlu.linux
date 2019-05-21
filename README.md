@@ -1,3 +1,7 @@
+![issues](https://img.shields.io/github/issues/eduardoalthaus/carlu.mint.svg)
+![forks](https://img.shields.io/github/forks/eduardoalthaus/carlu.mint.svg)
+![stars](https://img.shields.io/github/stars/eduardoalthaus/carlu.mint.svg)
+![license](https://img.shields.io/github/license/eduardoalthaus/carlu.mint.svg)
 # carlu.mint
 Script to auto install some apps in Linux Mint.  
   
