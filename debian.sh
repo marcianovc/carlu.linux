@@ -26,4 +26,4 @@ echo "Name=TOTVS" >> totvs.desktop
 chmod +x totvs.desktop
 sudo cp totvs.desktop /usr/share/applications/
 sudo dpkg --add-architecture i386 && apt-get update
-sudo apt-get install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender:i386 libxrender1:i386 libxext6:i386 -y
+sudo apt-get install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender1:i386 libxext6:i386 -y
