@@ -1,6 +1,6 @@
 #!/bin/bash
 $user = `egrep '1[0-9]{3}' /etc/passwd | cut -d \: -f1`
-apt update && apt install sudo -y && adduser $user sudo
+apt update && adduser $user sudo
 echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
 sudo apt update
 sudo apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* -y
