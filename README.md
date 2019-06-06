@@ -8,4 +8,4 @@ Script to auto install some apps in Linux Mint.
 # Install  
 <code>su
 
-apt update && apt install sudo git -y && apt upgrade -y && git clone https://github.com/eduardoalthaus/carlu.linux.git && cd carlu.linux && chmod +x YOUR-OS.sh && exit && sudo ./YOUR-OS.sh</code>
+apt update && apt install sudo git -y && apt upgrade -y && git clone https://github.com/eduardoalthaus/carlu.linux.git && cd carlu.linux && chmod +x YOUR-OS.sh && ./updateuser.sh</code>
