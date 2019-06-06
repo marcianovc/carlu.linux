@@ -1,11 +1,9 @@
 #!/bin/bash
-$user = `egrep '1[0-9]{3}' /etc/passwd | cut -d \: -f1`
-apt update && adduser $user sudo
 echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
-sudo apt update
-sudo apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* -y
+apt update
+apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* -y
 wget https://go.skype.com/skypeforlinux-64.deb /home/$user/
-sudo dpkg -i /home/$user/skypeforlinux-64.deb
+dpkg -i /home/$user/skypeforlinux-64.deb
 cd
 wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=1wgiUbBvRV8VwNmxjXRXVAo8zSwPvNFG_' -O smartclientLinux.zip
 unzip smartclientLinux.zip && rm smartclientLinux.zip && cd smartclientLinux && rm totvs.desktop
@@ -18,6 +16,6 @@ echo "Icon[pt_BR]=`pwd`/Protheus11.png" >> totvs.desktop
 echo "Exec=`pwd`/smartclient -m" >> totvs.desktop
 echo "Name=TOTVS" >> totvs.desktop
 chmod +x totvs.desktop
-sudo cp totvs.desktop /usr/share/applications/
-sudo dpkg --add-architecture i386 && sudo apt-get update
-sudo apt-get install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender1:i386 libxext6:i386 -y
+cp totvs.desktop /usr/share/applications/
+dpkg --add-architecture i386 && apt-get update
+apt-get install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender1:i386 libxext6:i386 -y
