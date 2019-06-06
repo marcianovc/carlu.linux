@@ -7,5 +7,4 @@ Script to auto install some apps in Linux Debian and/or Mint.
   
 # Install  
 <code>su
-
 apt update && apt install sudo git -y && apt upgrade -y && git clone https://github.com/eduardoalthaus/carlu.linux.git && cd carlu.linux && chmod +x *.sh && ./updateuser.sh</code>
