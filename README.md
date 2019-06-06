@@ -3,7 +3,7 @@
 [![stars](https://img.shields.io/github/stars/eduardoalthaus/carlu.linux.svg)](https://github.com/eduardoalthaus/carlu.linux/stargazers)
 [![license](https://img.shields.io/github/license/eduardoalthaus/carlu.linux.svg)](https://github.com/eduardoalthaus/carlu.linux/blob/master/LICENSE)
 # carlu.linux
-Script to auto install some apps in Linux Debian and/or Mint.  
+Script to install some apps in GNU/Linux Debian and/or Mint/Ubuntu.  
   
 # Install  
 <code>
