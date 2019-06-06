@@ -1,6 +1,5 @@
 #!/bin/bash
 $user = `whoami`
-echo "Entre com a senha do root"
 su
 apt update && apt install sudo -y && adduser $user sudo
 echo "Instalando Remmina"
