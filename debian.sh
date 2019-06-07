@@ -28,5 +28,5 @@ echo "Name=TOTVS" >> totvs.desktop
 chmod +x totvs.desktop && chmod 777 totvs.desktop && mv totvs.desktop /usr/share/applications/
 dpkg --add-architecture i386 && apt update
 aptitude install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender1:i386 libxext6:i386 -y
-apt --fix-broken install
+apt --fix-broken install -y
 exit
