@@ -19,6 +19,7 @@ echo "Icon=`pwd`/Protheus11.png" >> totvs.desktop
 echo "Icon[pt_BR]=`pwd`/Protheus11.png" >> totvs.desktop
 echo "Exec=`pwd`/smartclient -m" >> totvs.desktop
 echo "Name=TOTVS" >> totvs.desktop
-chmod +x totvs.desktop && mv totvs.desktop /usr/share/applications/
+chmod +x totvs.desktop && chmod 777 totvs.desktop && mv totvs.desktop /usr/share/applications/
 dpkg --add-architecture i386 && apt-get update
 apt-get install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender1:i386 libxext6:i386 -y
+exit
