@@ -1,4 +1,5 @@
 #!/bin/bash
+$user = `egrep '1[0-9]{3}' /etc/passwd | cut -d \: -f1`
 if [ ! -e /etc/apt/sources.list.d/stretch-backports.list ]
 then
     echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
