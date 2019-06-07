@@ -10,7 +10,7 @@ apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secre
 wget https://go.skype.com/skypeforlinux-64.deb
 dpkg -i skypeforlinux-64.deb
 wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=1wgiUbBvRV8VwNmxjXRXVAo8zSwPvNFG_' -O smartclientLinux.zip
-unzip smartclientLinux.zip && rm smartclientLinux.zip && chown -r $user:$user smartclientLinux/ && chmod -R 777 smartclientLinux/ && cd smartclientLinux && rm totvs.desktop
+unzip smartclientLinux.zip && rm smartclientLinux.zip && chown -R $user:$user smartclientLinux/ && chmod -R 777 smartclientLinux/ && cd smartclientLinux && rm totvs.desktop
 echo "[Desktop Entry]" >> totvs.desktop
 echo "Version=1.0" >> totvs.desktop
 echo "Type=Application" >> totvs.desktop
