@@ -6,7 +6,7 @@ then
     echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
 fi
 apt update
-apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* apt-transport-https aptitude htop gzip -y
+apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* apt-transport-https aptitude htop gzip net-tools -y
 if [ ! -e /usr/share/applications/skypeforlinux.desktop ]
 then
     wget https://go.skype.com/skypeforlinux-64.deb && dpkg -i skypeforlinux-64.deb
