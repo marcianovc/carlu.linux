@@ -9,12 +9,12 @@ apt update
 apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* apt-transport-https aptitude htop gzip net-tools -y
 if [ ! -e /usr/share/applications/skypeforlinux.desktop ]
 then
-    wget https://go.skype.com/skypeforlinux-64.deb && dpkg -i skypeforlinux-64.deb
+    wget https://go.skype.com/skypeforlinux-64.deb && dpkg -i skypeforlinux-64.deb && rm -rf skypeforlinux-64.deb
 fi
 if [ ! -e /usr/share/applications/totvs.desktop ]
 then
     wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=1wgiUbBvRV8VwNmxjXRXVAo8zSwPvNFG_' -O smartclientLinux.zip
-    unzip smartclientLinux.zip && rm -rf smartclientLinux.zip && rm -rf skypeforlinux-64.deb
+    unzip smartclientLinux.zip && rm -rf smartclientLinux.zip
     chown -R $user:$user smartclientLinux/ && chmod -R 777 smartclientLinux/ && cd smartclientLinux && rm -rf totvs.desktop
     echo "[Desktop Entry]" >> totvs.desktop
     echo "Version=1.0" >> totvs.desktop
