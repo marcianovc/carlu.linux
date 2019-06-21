@@ -29,5 +29,8 @@ chmod +x totvs.desktop && chmod 777 totvs.desktop && mv totvs.desktop /usr/share
 dpkg --add-architecture i386 && apt update
 aptitude install gcc-multilib lib32z1 lib32ncurses5 libglib2.0-0:i386 libsm6:i386 libxrender1:i386 libxext6:i386 -y
 apt --fix-broken install -y
+echo -e "deb http://linux.teamviewer.com/deb stable main\ndeb http://linux.teamviewer.com/deb preview main" > /etc/apt/sources.list.d/teamviewer.list
+wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | apt-key add -
+apt update && apt install teamviewer
 git clone https://github.com/eduardoalthaus/hddtest && cd hddtest && chmod +x run.sh && ./run.sh
 exit
