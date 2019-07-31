@@ -1,12 +1,12 @@
 #!/bin/bash
 user=`egrep '1[0-9]{3}' /etc/passwd | cut -d \: -f1`
 cd /home/$user/
-if [ ! -e /etc/apt/sources.list.d/stretch-backports.list ]
+if [ ! -e /etc/apt/sources.list.d/buster-backports.list ]
 then
-    echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
+    echo 'deb http://ftp.debian.org/debian buster-backports main' | sudo tee --append /etc/apt/sources.list.d/buster-backports.list >> /dev/null
 fi
 apt update
-apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* apt-transport-https aptitude htop gzip net-tools -y
+apt install -t buster-backports remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice cups-pdf zip hplip* apt-transport-https aptitude htop gzip net-tools -y
 if [ ! -e /usr/share/applications/skypeforlinux.desktop ]
 then
     wget https://go.skype.com/skypeforlinux-64.deb && dpkg -i skypeforlinux-64.deb && rm -rf skypeforlinux-64.deb
