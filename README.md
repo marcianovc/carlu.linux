@@ -9,4 +9,4 @@ Script to install some apps in GNU/Linux Debian and/or Mint/Ubuntu.
 <code>
 su
 
-apt --fix-broken install -y && apt update && apt install sudo git -y && apt upgrade -y && git clone https://github.com/eduardoalthaus/carlu.linux.git && chmod -R 777 carlu.linux/ && cd carlu.linux && chmod +x *.sh && ./updateuser.sh</code>
+apt --fix-broken install -y && apt update && apt install sudo git -y && apt upgrade -y && git clone https://github.com/marcianovc/carlu.linux.git && chmod -R 777 carlu.linux/ && cd carlu.linux && chmod +x *.sh && ./updateuser.sh</code>
