@@ -17,4 +17,8 @@ fi
 apt-get update && apt-get install skypeforlinux -y --force-yes
 mv ~/.local/share/keyrings/login.keyring .local/share/keyrings/login.keyring.bkp
 wget https://download.virtualbox.org/virtualbox/5.2.26/Oracle_VM_VirtualBox_Extension_Pack-5.2.26.vbox-extpack 
+apt install smbclient -y
+grep -rIl 'WORKGROUP' /etc/samba/smb.conf | xargs sed -i 's/WORKGROUP/CARLU/g'
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list && apt update && apt install anydesk
 exit

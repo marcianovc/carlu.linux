@@ -36,5 +36,8 @@ then
     wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | apt-key add -
     apt update && apt install teamviewer -y
 fi
-git clone https://github.com/eduardoalthaus/hddtest && cd hddtest && chmod +x run.sh && ./run.sh
+git clone https://github.com/eduardoalthaus/hddtest && cd hddtest && chmod +x run.sh && ./run.sh && apt install smbclient -y
+grep -rIl 'WORKGROUP' /etc/samba/smb.conf | xargs sed -i 's/WORKGROUP/CARLU/g'
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list && apt update && apt install anydesk
 exit
