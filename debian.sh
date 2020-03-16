@@ -16,7 +16,7 @@ then
 fi
 if [ ! -e /usr/share/applications/totvs.desktop ]
 then
-    wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=1wgiUbBvRV8VwNmxjXRXVAo8zSwPvNFG_' -O smartclientLinux.zip
+    wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=1S3tXRdseVxR4RRGwBmEsyMERea4ev36S' -O smartclientLinux.zip
     unzip smartclientLinux.zip && rm -rf smartclientLinux.zip
     chown -R $user:$user smartclientLinux/ && chmod -R 777 smartclientLinux/ && cd smartclientLinux && rm -rf totvs.desktop
     echo "[Desktop Entry]" >> totvs.desktop
