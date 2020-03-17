@@ -25,7 +25,7 @@ then
     echo "Terminal=false" >> totvs.desktop
     echo "Icon=`pwd`/Protheus11.png" >> totvs.desktop
     echo "Icon[pt_BR]=`pwd`/Protheus11.png" >> totvs.desktop
-    echo "Exec=`pwd`/smartclient -m" >> totvs.desktop
+    echo "Exec=`pwd`/smartclient.sh" >> totvs.desktop
     echo "Name=TOTVS" >> totvs.desktop
     chmod +x totvs.desktop && chmod 777 totvs.desktop && mv totvs.desktop /usr/share/applications/
 fi
