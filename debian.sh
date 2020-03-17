@@ -16,10 +16,9 @@ then
 fi
 if [ ! -e /usr/share/applications/totvs.desktop ]
 then
-    mkdir smartclientLinux && cd smartclientLinux
-    wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=1vhN8vwe2U0s4CV7E8zQ3b7yHyMu29Kbl' -O smartclientLinux.zip
-    unzip smartclientLinux.zip && rm -rf smartclientLinux.zip && cd ..
-    chown -R $user:$user smartclientLinux/ && chmod -R 777 smartclientLinux/ && cd smartclientLinux && rm -rf totvs.desktop
+    wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=186We3f_PYjf-zqVyhr5V5kMCaApL6uh_' -O smartclient.zip
+    unzip smartclient.zip && rm -rf smartclient.zip
+    chown -R $user:$user smartclient/ && chmod -R 777 smartclient/ && cd smartclient && rm -rf totvs.desktop
     echo "[Desktop Entry]" >> totvs.desktop
     echo "Version=1.0" >> totvs.desktop
     echo "Type=Application" >> totvs.desktop
