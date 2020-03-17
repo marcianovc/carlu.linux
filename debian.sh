@@ -27,6 +27,7 @@ then
     echo "Icon[pt_BR]=`pwd`/Protheus11.png" >> totvs.desktop
     echo "Exec=`pwd`/smartclient.sh" >> totvs.desktop
     echo "Name=TOTVS" >> totvs.desktop
+    grep -rl "marciano" smartclient.sh | xargs sed -i "s/marciano/$user/g"
     chmod +x totvs.desktop && chmod 777 totvs.desktop && mv totvs.desktop /usr/share/applications/
 fi
 dpkg --add-architecture i386 && apt update
