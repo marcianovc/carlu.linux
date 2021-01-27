@@ -5,6 +5,8 @@ if [ ! -e /etc/apt/sources.list.d/buster-backports.list ]
 then
     echo 'deb http://ftp.debian.org/debian buster-backports main' | sudo tee --append /etc/apt/sources.list.d/buster-backports.list >> /dev/null
 fi
+versao=`cat /etc/*-release | grep VERSION_CODENAME | sed s'/VERSION_CODENAME=//'`
+echo -e "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian "$versao" contrib" > /etc/apt/sources.list.d/virtualbox.list
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | apt-key add -
 apt update
